@@ -20,7 +20,14 @@ The time and date fields are:
        day of week    0-7 (0 or 7 is Sunday, or use names)
 
 
-command to run the shell script at:- 0 min 21 hrs *all days *every month *every weekday
+#command to run the shell script at:- 0 min 21 hrs *all days *every month *every weekday
 0 21 * * * root /usr/local/sbin/maint.sh
+
+#command for telegram notification
+python tel.py
+
+#command for sending the email after modifying the txt file using filehandling in python:
+sudo mail -s "Re:[foss-2019] Status Update [XX-XX-XXXX]" "justaninnocentguy@gmail.com" < sample.txt
+
 
 Method 1:Using only cron, disadvantages if the user's system is not by 2100 hrs(ideal time to notify for update) and if the user opens his laptop between 2100hrs to 0500 hrs he wont be notified.
